@@ -1,12 +1,13 @@
-package main
+package cmd
 
 import (
 	"log"
 
-	"github.com/InvalidJokerDE/fpm/utils"
+	"github.com/InvalidJokerDE/fpm/internal/server"
+	"github.com/InvalidJokerDE/fpm/internal/server/utils"
 )
 
-func main() {
+func Execute() {
 
 	if err := utils.LoadProcesses(); err != nil {
 		panic(err)
@@ -14,7 +15,7 @@ func main() {
 
 	log.Println("Starting server")
 
-	err2 := StartServer()
+	err2 := server.StartServer()
 
 	if err2 != nil {
 		log.Fatal(err2)

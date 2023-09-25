@@ -2,7 +2,7 @@ package commands
 
 import (
 	"fmt"
-	"github.com/InvalidJokerDE/fpm/utils"
+	"github.com/InvalidJokerDE/fpm/internal/server/utils"
 	"net"
 )
 

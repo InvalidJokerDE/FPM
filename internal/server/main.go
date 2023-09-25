@@ -1,15 +1,14 @@
-package main
+package server
 
 import (
 	"fmt"
-	"github.com/InvalidJokerDE/fpm/utils"
+	"github.com/InvalidJokerDE/fpm/internal/server/utils"
 	"net"
 	"os"
 	"os/signal"
 	"strings"
 	"syscall"
-
-	"github.com/InvalidJokerDE/fpm/commands"
+	"github.com/InvalidJokerDE/fpm/internal/server/commands"
 )
 
 func callback(conn net.Conn) error {
